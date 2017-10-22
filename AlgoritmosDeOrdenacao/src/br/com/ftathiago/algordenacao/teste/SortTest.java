@@ -1,8 +1,7 @@
 package br.com.ftathiago.algordenacao.teste;
 import org.junit.Test;
 
-import br.com.ftathiago.algordenacao.BubleSort;
-import br.com.ftathiago.algordenacao.SelectionSort;
+import br.com.ftathiago.algordenacao.*;
 
 public class SortTest {
 
@@ -39,5 +38,16 @@ public class SortTest {
 		}
 		System.out.println("");
 		
-	}	
+	}
+	@Test
+	public void testInsertionSort() {
+		int [] vetor = {5, 20,13,21,3,4};
+		System.out.println("InsertionSort");		
+		new InsertionSort(vetor, vetor.length);
+		for (int i = 0; i < vetor.length; i++) {
+			System.out.printf("%d ", vetor[i]);
+		}
+		System.out.println("");
+		
+	}		
 }
