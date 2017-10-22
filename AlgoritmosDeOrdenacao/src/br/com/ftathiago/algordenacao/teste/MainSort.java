@@ -1,3 +1,5 @@
+package br.com.ftathiago.algordenacao.teste;
+import br.com.ftathiago.algordenacao.QuickSort;
 
 public class MainSort {
 

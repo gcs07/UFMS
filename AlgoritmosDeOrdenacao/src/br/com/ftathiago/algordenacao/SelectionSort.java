@@ -1,3 +1,4 @@
+package br.com.ftathiago.algordenacao;
 
 public class SelectionSort {
 	/*

@@ -1,4 +1,8 @@
+package br.com.ftathiago.algordenacao.teste;
 import org.junit.Test;
+
+import br.com.ftathiago.algordenacao.BubleSort;
+import br.com.ftathiago.algordenacao.SelectionSort;
 
 public class SortTest {
 
