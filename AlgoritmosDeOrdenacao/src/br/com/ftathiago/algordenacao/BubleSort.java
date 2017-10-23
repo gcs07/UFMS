@@ -3,7 +3,7 @@ public class BubleSort {
 	public BubleSort(int [] vetor) {
 		/*
 		 * Buble sort: 
-		 * Percorre o vetor, comparando os elementos até que o maor deles esteja na
+		 * Percorre o vetor, comparando os elementos até que o maior deles esteja na
 		 * última posição.
 		 */
 		for (int i = vetor.length -1; i>0; i--) { // Percorre o vetor de trás pra frente
