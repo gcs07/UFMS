@@ -2,27 +2,27 @@ package br.com.ftathiago.algordenacao;
 
 public class HeapSort {
 	/*
-	 * Todo o lance do Heap está no padrão matemático estabelecido por ele. O
-	 * pai de qqr nó (ou posição do vetor) sempre será: (posição -1) / 2 Se você
-	 * tem o pai, você tem como descobrir os dois filhos. Da direita: 2 *
-	 * posição + 2; Da esquerda: 2 * posição + 1; Apenas preste atenção para que
-	 * a condição de existência dos filhos seja considerada. Ou seja: esquerda e
-	 * direita NÃO PODEM SER MAIOR do que o tamanho do array que está sendo
+	 * Todo o lance do Heap estÃ¡ no padrÃ£o matemÃ¡tico estabelecido por ele. O
+	 * pai de qqr nÃ³ (ou posiÃ§Ã£o do vetor) sempre serÃ¡: (posiÃ§Ã£o -1) / 2 Se vocÃª
+	 * tem o pai, vocÃª tem como descobrir os dois filhos. Da direita: 2 *
+	 * posiÃ§Ã£o + 2; Da esquerda: 2 * posiÃ§Ã£o + 1; Apenas preste atenÃ§Ã£o para que
+	 * a condiÃ§Ã£o de existÃªncia dos filhos seja considerada. Ou seja: esquerda e
+	 * direita NÃƒO PODEM SER MAIOR do que o tamanho do array que estÃ¡ sendo
 	 * considerado.
 	 */
 	public HeapSort(int vetor[], int tam) {
 		/*
-		 * Varre o array do fim para o início.
+		 * Varre o array do fim para o inÃ­cio.
 		 */
 		for (int i = tam - 1; i >= 0; i--) {
 			/*
-			 * Organiza o array, criando a pilha. Note que, a cada iteração, i é
-			 * diminuído. Desta forma, estou falando para a pilha que o meu
-			 * array está diminuindo, ou ainda que eu desejo que ela considere
-			 * um intervalo menor. Isto porque, a cada iteração, estou colocando
-			 * o maior número no final do array. Assim, não preciso calcular
-			 * tudo de novo. E veja: este é o motivo pelo qual é preciso avaliar
-			 * a condição de existência do nó.
+			 * Organiza o array, criando a pilha. Note que, a cada iteraÃ§Ã£o, i Ã©
+			 * diminuÃ­do. Desta forma, estou falando para a pilha que o meu
+			 * array estÃ¡ diminuindo, ou ainda que eu desejo que ela considere
+			 * um intervalo menor. Isto porque, a cada iteraÃ§Ã£o, estou colocando
+			 * o maior nÃºmero no final do array. Assim, nÃ£o preciso calcular
+			 * tudo de novo. E veja: este Ã© o motivo pelo qual Ã© preciso avaliar
+			 * a condiÃ§Ã£o de existÃªncia do nÃ³.
 			 */
 			heap(vetor, i);
 			int tmp = vetor[0];
@@ -33,27 +33,27 @@ public class HeapSort {
 	}
 
 	private void heap(int[] vetor, int tam) {
-		// Aqui encontro o nó pai
-		for (int i = ((tam - 1) / 2); i >= 0; i--) {
+		// Aqui encontro o nÃ³ pai
+		for (int i = (tam - 1) / 2); i >= 0; i--) {
 			organizaNo(vetor, i, tam);
 			tam--;
 		}
 	}
 
 	private void organizaNo(int[] vetor, int i, int tam) {
-		// Aqui eu encontro os filhos, de acordo com o nó pai.
+		// Aqui eu encontro os filhos, de acordo com o nÃ³ pai.
 		int posMaior = i;
 		int esq = 2 * i + 1;
 		int dir = 2 * i + 2;
 		/*
-		 * Verifica a condição de existência de esq e direita É importante que a
-		 * condição de existência seja uma operação matemática e não v[dir] !=
-		 * null. v[dir] não será null quando dir >=0 e dir < metade do array.
-		 * Por isso é importante fazer as contas abaixo nos if's
+		 * Verifica a condiÃ§Ã£o de existÃªncia de esq e direita Ã‰ importante que a
+		 * condiÃ§Ã£o de existÃªncia seja uma operaÃ§Ã£o matemÃ¡tica e nÃ£o v[dir] !=
+		 * null. v[dir] nÃ£o serÃ¡ null quando dir >=0 e dir < metade do array.
+		 * Por isso Ã© importante fazer as contas abaixo nos if's
 		 */
 
 		if (esq <= tam) {
-			// Além da condição de existência, já vejo qual o nó filho que é
+			// AlÃ©m da condiÃ§Ã£o de existÃªncia, jÃ¡ vejo qual o nÃ³ filho que Ã©
 			// maior
 			if ((dir <= tam) && (vetor[esq] < vetor[dir])) {
 				posMaior = dir;
